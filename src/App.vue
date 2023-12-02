@@ -5,15 +5,11 @@ import TheWelcome from './components/TheWelcome.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+    <h1>wedding day</h1>
   </header>
 
   <main>
-    <TheWelcome />
+      <h1>23-06-22</h1>
   </main>
 </template>
 
