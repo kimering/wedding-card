@@ -19,10 +19,10 @@ defineProps({
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     height: 100dvh;
-    background: center / cover no-repeat url("../assets/hello/main_back.png");
+    background: center / cover no-repeat url("../assets/hello/hello_back.png");
 }
 .wedding {
     display: flex;
