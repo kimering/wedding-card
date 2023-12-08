@@ -2,17 +2,17 @@
 
 @font-face {
   font-family: 'leferi-white';
-  src: url('src/assets/fonts/LeferiPointWhite.ttf');
+  src: url('./fonts/LeferiPointWhite.ttf');
   font-style: normal;
 }
 @font-face {
   font-family: 'leferi';
-  src: url('src/assets/fonts/LeferiBaseRegular.ttf');
+  src: url('./fonts/LeferiBaseRegular.ttf');
   font-style: normal;
 }
 @font-face {
   font-family: 'leferi-special';
-  src: url('src/assets/fonts/LeferiPointSpecial.ttf');
+  src: url('./fonts/LeferiPointSpecial.ttf');
   font-style: normal;
 }
 body {
