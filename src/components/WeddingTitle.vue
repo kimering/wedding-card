@@ -53,13 +53,13 @@
         width: 100%;
         padding: 40px 20px;
         font-family: leferi-white;
-        font-weight: 300;
+        font-weight: 600;
         max-width: 800px;
         letter-spacing: -0.4px;
+        font-size: 14px;
 
         .title-card-text {
             text-align: center;
-            font-size: 12px;
         }
         .title-star {
             margin: 40px 0;
@@ -70,15 +70,15 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            font-size: 12px;
             .family-box {
                 min-width: 40%;
-                color: #111;
+                color: #222;
                 .name {
                     /*color: red;*/
                     font-family: leferi-special;
                     color: #073369;
                     font-size: 20px;
+                     font-weight: normal;
                 }
             }
         }
