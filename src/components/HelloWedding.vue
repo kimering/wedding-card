@@ -21,6 +21,7 @@ defineProps({
     align-items: center;
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     background: center / cover no-repeat url("../assets/hello/main_back.png");
 }
 .wedding {
