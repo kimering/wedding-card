@@ -2,12 +2,15 @@
 import HelloWedding from "@/components/HelloWedding.vue";
 import WeddingDay from "@/components/WeddingDay.vue";
 import WeddingTitle from "@/components/WeddingTitle.vue";
+import PhotoCircle from "@/components/PhotoCircle.vue";
 </script>
 
 <template>
-  <HelloWedding msg="weddingData" />
+  <HelloWedding msg="weddingData"/>
   <WeddingTitle/>
-<!--  <WeddingDay></WeddingDay>-->
+  <WeddingDay/>
+  <PhotoCircle/>
+  <!--  <WeddingPay/>-->
 
 </template>
 
