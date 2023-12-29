@@ -41,8 +41,16 @@
   align-items: center;
   text-align: center;
   background: white;
-  padding: 40px;
+  margin: 40px 20px;
   color: #073369;
+  @include tablet {
+    margin: 40px 30px;
+
+  }
+  @include desktop {
+    margin: 40px;
+
+  }
 
 
   .title-star {

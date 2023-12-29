@@ -3,6 +3,7 @@ import HelloWedding from "@/components/HelloWedding.vue";
 import WeddingDay from "@/components/WeddingDay.vue";
 import WeddingTitle from "@/components/WeddingTitle.vue";
 import PhotoCircle from "@/components/PhotoCircle.vue";
+import WeddingPay from "@/components/WeddingPay.vue";
 </script>
 
 <template>
@@ -10,7 +11,7 @@ import PhotoCircle from "@/components/PhotoCircle.vue";
   <WeddingTitle/>
   <WeddingDay/>
   <PhotoCircle/>
-  <!--  <WeddingPay/>-->
+  <WeddingPay/>
 
 </template>
 

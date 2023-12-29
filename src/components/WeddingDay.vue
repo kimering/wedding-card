@@ -19,19 +19,38 @@
 .wedding-day {
   display: flex;
   justify-content: center;
-  height: 800px;
+
+  width: 100%;
+  padding-bottom: 50%;
+
+  @include desktop {
+    padding-bottom: min(50%, 600px);
+  }
 
   .background {
     position: absolute;
     overflow: hidden;
-    margin: 0 40px;
-    width: calc(100% - 80px);
-    height: 800px;
+    //margin: 0 20px;
+    width: calc(100% - 40px);
+    height: calc(50% + 30px);
     border-radius: 40px 0 0 0;
     background: linear-gradient(to right, #e5ebf2, #a7bbde);
     display: flex;
     flex-grow: 1;
     z-index: -1;
+
+    @include mobile {
+      margin: 0;
+      width: 100%;
+      border-radius: 60px 0 0 0;
+
+    }
+
+    @include tablet {
+      margin: 0 30px;
+      width: calc(100% - 60px);
+
+    }
 
     @include desktop {
       font-size: 2rem;
