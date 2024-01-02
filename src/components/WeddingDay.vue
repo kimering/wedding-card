@@ -10,6 +10,8 @@
     </div>
     <div class="day-card">
       hihi
+      <!--      <div class="calendar"/>-->
+      <img class="calendar" src="./../assets/image/calendar.png"/>
     </div>
   </div>
 </template>
@@ -32,7 +34,7 @@
     overflow: hidden;
     //margin: 0 20px;
     width: calc(100% - 40px);
-    height: calc(50% + 30px);
+    height: 100%;
     border-radius: 40px 0 0 0;
     background: linear-gradient(to right, #e5ebf2, #a7bbde);
     display: flex;
@@ -149,6 +151,7 @@
     width: 100%;
     max-width: calc(100% - 80px);
     font-size: 1.4rem;
+    
 
     @include tablet {
       font-size: 1.6rem;
@@ -158,6 +161,13 @@
       font-size: 2rem;
       width: 100%;
       max-width: 1200px;
+    }
+
+    .calendar {
+      //background: center / cover no-repeat url("../assets/image/calendar.png");
+      //height: 50vw;
+      width: 100%;
+      max-width: 800px;
     }
   }
 

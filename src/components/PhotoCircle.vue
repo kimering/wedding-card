@@ -6,8 +6,9 @@
 
     <div class="photo-circle">
       <div class="circle-frame">
-
       </div>
+      <div>gallery</div>
+      <div>see more</div>
     </div>
   </div>
 </template>

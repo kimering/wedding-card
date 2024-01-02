@@ -20,6 +20,8 @@
     background: #073369;
     border-radius: min(300px, 50vw) min(300px, 50vw) 0 0;
     height: 500px;
+    text-align: center;
+    padding-top: 40px;
   }
 }
 </style>
