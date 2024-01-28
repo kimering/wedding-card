@@ -9,8 +9,18 @@
       <div></div>
     </div>
     <div class="day-card">
-      hihi
-      <!--      <div class="calendar"/>-->
+      <div class="day-card-title">
+        <div class="day-card-upper">
+          <!--          <span class="year">2024</span>-->
+          <span class="month">2024년 6월 22일 토요일</span>
+          <!--          <span class="week">[토요일]</span>-->
+        </div>
+        <div class="day-card-lower">
+          <span class="time">12:40</span>
+          <span class="place">더파티움 여의도 B1 그랜드컨벤션 홀</span>
+        </div>
+      </div>
+
       <img class="calendar" src="./../assets/image/calendar.png"/>
     </div>
   </div>
@@ -146,28 +156,75 @@
 
 
   .day-card {
-    //background: black;
-    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px;
     width: 100%;
     max-width: calc(100% - 80px);
-    font-size: 1.4rem;
-    
+    font-size: 2.0rem;
+    font-family: leferi-special;
+    //font-family: GowunBatang-Regular;
+    //font-family: 'Nanum Myeongjo';
+    color: $dark-color-1;
+
 
     @include tablet {
-      font-size: 1.6rem;
+      //font-size: 1.6rem;
       width: 100%;
     }
     @include desktop {
-      font-size: 2rem;
+      //font-size: 2rem;
       width: 100%;
       max-width: 1200px;
     }
 
+
+    .day-card-title {
+      background: white;
+      border-radius: 40px;
+      text-align: center;
+      width: 90%;
+
+      .day-card-upper {
+        font-weight: bold;
+
+        .year {
+          writing-mode: vertical-rl;
+          transform: rotate(180deg);
+          font-size: 32%;
+          font-weight: bold;
+          padding-left: 4px;
+
+        }
+
+        .month {
+          font-size: 100%;
+          padding-right: 16px;
+
+        }
+
+        .week {
+          font-size: 40%;
+        }
+      }
+
+      .day-card-lower {
+        .time {
+          padding-right: 16px;
+          font-size: 100%;
+        }
+
+        .place {
+          font-size: 40%;
+        }
+      }
+    }
+
     .calendar {
-      //background: center / cover no-repeat url("../assets/image/calendar.png");
-      //height: 50vw;
+      margin-top: 20px;
       width: 100%;
-      max-width: 800px;
+      max-width: 600px;
     }
   }
 

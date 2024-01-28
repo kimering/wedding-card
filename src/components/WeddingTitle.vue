@@ -32,9 +32,6 @@
 
 
 <style lang="scss" scoped>
-
-//@import "@/assets/style/_mixins.scss";
-
 .wedding-title {
   display: flex;
   flex-direction: column;
@@ -42,7 +39,7 @@
   text-align: center;
   background: white;
   margin: 40px 20px;
-  color: #073369;
+  color: $dark-color-1;
   @include tablet {
     margin: 40px 30px;
 
@@ -61,7 +58,7 @@
   .title-card {
     position: relative;
     top: -16px;
-    border: 2px solid #79a6dd;
+    border: 2px solid $light-color-1;
     border-radius: 40px 40px 0 40px;
     width: 100%;
     padding: 40px 20px;
@@ -102,7 +99,7 @@
         .name {
           /*color: red;*/
           font-family: leferi-special;
-          color: #073369;
+          color: $dark-color-1;
           font-size: 20px;
           font-weight: normal;
         }
