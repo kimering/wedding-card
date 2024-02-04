@@ -3,59 +3,82 @@
 
 <template>
   <div class="photo-back">
-
-    <div class="photo-circle">
-      <div class="circle-frame">
-      </div>
-      <div>gallery</div>
-      <div>see more</div>
+    <div class="half-back">
+      <div class="half-inner"></div>
     </div>
+    <div class="circle-back"></div>
+    <img class="circle" src="./../assets/image/circle.png"/>
   </div>
 </template>
 
 
 <style lang="scss">
 .photo-back {
-  background: white;
-}
-
-.photo-circle {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  overflow: hidden;
   position: relative;
-  justify-content: center;
-  padding: 30px 40px calc(50%) 40px;
-  margin: 0 40px;
 
-  @include mobile {
-    margin: 0 20px;
-  }
-
-  @include desktop {
-    padding-bottom: min(50%, 600px);
-  }
-
-  .circle-frame {
-    position: absolute;
-    transform: translate(0%, -55%);
-    background: center / cover no-repeat url("../assets/image/circle.png");
+  .half-back {
+    aspect-ratio: 2 / 1;
+    background: $dark-color-1;
     width: 100%;
-    padding-bottom: 100%;
-    border-radius: 100%;
+    position: absolute;
+    z-index: -2;
 
-    @include mobile {
-      outline: 20px solid white;
-
-    }
     @include tablet {
-      outline: 30px solid white;
+      width: calc(100% - 60px);
+    }
 
+    @include desktop {
+      width: 1200px;
+    }
+
+    .half-inner {
+      border: 1px solid $light-color-2;
+      border-top: none;
+      margin: 0 16px 16px 16px;
+      width: calc(100% - 32px);
+      height: 100%;
+    }
+  }
+
+  .circle-back {
+    border-radius: 50% 50% 0 0;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    max-width: 1240px;
+    background: white;
+    position: absolute;
+    z-index: -2;
+    @include tablet {
+      width: calc(100% - 60px);
     }
     @include desktop {
-      width: 100%;
       max-width: 1200px;
-      padding-bottom: min(100%, 1200px);
-      outline: 40px solid white;
     }
   }
+
+  .circle {
+    border-radius: 50%;
+    border: 20px solid white;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    position: relative;
+
+    max-width: 1200px;
+    @include tablet {
+      width: calc(100% - 60px);
+
+    }
+
+    @include desktop {
+      max-width: 1200px;
+    }
+  }
+
 }
 </style>
