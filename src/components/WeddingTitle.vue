@@ -9,9 +9,10 @@
       <div class="title-card-text">
         서로가 서로에게 기꺼이 <br/>
         당신의 유일이 되리라 다짐했습니다. <br/><br/>
-        하나가 되는 날, <br/>
-        오셔서 축하해 주시면 <br/>
-        더없는 기쁨이겠습니다. <br/>
+        하나가 되기로 약속하는 날,<br/>
+        귀한 걸음 함께해 주시기를 기대하겠습니다. <br/>
+        나누어 주시는 모든 격려와 축하를 <br/>
+        저희 두 사람의 오랜 기쁨으로 간직하겠습니다. <br/>
       </div>
       <img class="title-star" src="./../assets/icon/square_star.png"/>
 
@@ -100,8 +101,14 @@
           /*color: red;*/
           font-family: leferi-special;
           color: $dark-color-1;
-          font-size: 20px;
           font-weight: normal;
+          font-size: 2rem;
+          @include tablet {
+            font-size: 2.4rem;
+          }
+          @include desktop {
+            font-size: 2.8rem;
+          }
         }
       }
     }

@@ -2,8 +2,9 @@
 import HelloWedding from "@/components/HelloWedding.vue";
 import WeddingTitle from "@/components/WeddingTitle.vue";
 import PhotoCircle from "@/components/PhotoCircle.vue";
-import WeddingPay from "@/components/WeddingPay.vue";
+import WeddingContact from "@/components/WeddingContact.vue";
 import WeddingCalendar from "@/components/WeddingCalendar.vue";
+import WeddingFooter from "@/components/WeddingFooter.vue";
 </script>
 
 <template>
@@ -12,7 +13,8 @@ import WeddingCalendar from "@/components/WeddingCalendar.vue";
   <!--  <WeddingDay/>-->
   <WeddingCalendar/>
   <PhotoCircle/>
-  <WeddingPay/>
+  <WeddingContact/>
+  <WeddingFooter/>
 
 </template>
 
