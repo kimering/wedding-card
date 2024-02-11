@@ -13,15 +13,15 @@
             <div>
               <div>신랑 김태훈</div>
               <div class="icons">
-                <div class="icon taehun-call" @click="location.href='tel:01085154753'"></div>
-                <div class="icon taehun-msg" @click="location.href='sms:01085154753'"></div>
+                <div class="icon taehun-call" onclick="location.href='tel:01085154753'"></div>
+                <div class="icon taehun-msg" onclick="location.href='sms:01085154753'"></div>
               </div>
             </div>
             <div>
               <div>신부 김혜림</div>
               <div class="icons">
-                <div class="icon hyerim-call" @click="location.href='tel:01071207671'"></div>
-                <div class="icon hyerim-msg" @click="location.href='sms:01071207671'"></div>
+                <div class="icon hyerim-call" onclick="document.location.href='tel:01071207671'"></div>
+                <div class="icon hyerim-msg" onclick="document.location.href='sms:01071207671'"></div>
               </div>
             </div>
           </div>
@@ -32,15 +32,15 @@
             <div>
               <div>아버지 김승섭</div>
               <div class="icons">
-                <div class="icon taehun-call" @click="location.href='tel:01055374753'"></div>
-                <div class="icon taehun-msg" @click="location.href='sms:01055374753'"></div>
+                <div class="icon taehun-call" onclick="location.href='tel:01055374753'"></div>
+                <div class="icon taehun-msg" onclick="location.href='sms:01055374753'"></div>
               </div>
             </div>
             <div>
               <div>어머니 채영희</div>
               <div class="icons">
-                <div class="icon hyerim-call" @click="location.href='tel:01056444753'"></div>
-                <div class="icon hyerim-msg" @click="location.href='sms:01056444753'"></div>
+                <div class="icon hyerim-call" onclick="location.href='tel:01056444753'"></div>
+                <div class="icon hyerim-msg" onclick="location.href='sms:01056444753'"></div>
               </div>
             </div>
           </div>
@@ -51,15 +51,15 @@
             <div>
               <div>아버지 김성우</div>
               <div class="icons">
-                <div class="icon taehun-call" @click="location.href='tel:01096717671'"></div>
-                <div class="icon taehun-msg" @click="location.href='sms:01096717671'"></div>
+                <div class="icon taehun-call" onclick="location.href='tel:01096717671'"></div>
+                <div class="icon taehun-msg" onclick="location.href='sms:01096717671'"></div>
               </div>
             </div>
             <div>
               <div>어머니 김주현</div>
               <div class="icons">
-                <div class="icon hyerim-call" @click="location.href='tel:01068016901'"></div>
-                <div class="icon hyerim-msg" @click="location.href='sms:01068016901'"></div>
+                <div class="icon hyerim-call" onclick="location.href='tel:01068016901'"></div>
+                <div class="icon hyerim-msg" onclick="location.href='sms:01068016901'"></div>
               </div>
             </div>
           </div>

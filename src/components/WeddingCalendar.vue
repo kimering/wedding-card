@@ -1,4 +1,16 @@
 <script setup>
+
+import {ref} from 'vue'
+
+const showToast = ref(false);
+
+const toggleToast = () => {
+  navigator.clipboard.writeText('서울시 영등포구 은행로 30')
+  showToast.value = true;
+  setTimeout(() => {
+    showToast.value = false;
+  }, 3000)
+}
 </script>
 <template>
   <div class="wedding-calendar">
@@ -32,19 +44,20 @@
             <div class="map-title">지번주소</div>
             <div class="map-address-wrapper">
               <div>서울시 영등포구 여의도동 16-2</div>
-              <div>중소기업중앙회</div>
+              <div>중소기업중앙회 {{ showToast }}</div>
             </div>
 
           </div>
           <div class="map-icon-wrapper">
-            <div class="map-icon naver-map"></div>
-            <div class="map-icon kakao-map"></div>
-            <div class="map-icon t-map"></div>
-            <div class="map-icon copy" @click="navigator.clipboard.writeText('서울시 영등포구 은행로 30')"></div>
+            <div class="map-icon naver-map" onclick="location.href='https://naver.me/xaopRS6M'"></div>
+            <div class="map-icon kakao-map" onclick="location.href='https://kko.to/bd3RgZqWxw'"></div>
+            <!--            <div class="map-icon t-map" onclick="location.href='https://naver.me/xaopRS6M'"></div>-->
+            <div class="map-icon copy" @click="toggleToast"></div>
           </div>
         </div>
       </div>
     </div>
+    <div id="toast_message" :class="{active:showToast}">주소가 복사되었습니다!</div>
   </div>
 </template>
 <style lang="scss">
@@ -247,5 +260,29 @@
     }
   }
 
+  #toast_message {
+    position: fixed;
+    display: block;
+    font-family: leferi;
+    color: white;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border-radius: 20px;
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    box-shadow: 3px 4px 11px 0px #00000040;
+    transition: all 0.5s;
+
+    &.active {
+      bottom: 50px;
+    }
+
+    &.inactive {
+      bottom: -100px;
+
+    }
+  }
 }
 </style>
