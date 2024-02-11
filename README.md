@@ -1,14 +1,41 @@
 # wedding-card
 
-This template should help get you started developing with Vue 3 in Vite.
+김태훈 & 김혜림의 모바일 청첩장입니다.
 
-## Recommended IDE Setup
+사용은 자유롭게 하시되, 원작자에게 커피를 한 잔 부탁드립니다 (- -)(_ _)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+이미지가 많습니다. 이미지 수정을 원하신다면 연락 주세요 (유료, 금액은 이미지 장수에 따라 상이)
 
-## Customize configuration
+## 모바일 청첩장 셀프로 만들기
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+1부터 100까지 혼자 하실 생각이라면 여러분을 말리고 싶습니다.
+
+차라리 저에게 커피를 사주시고 이 레포를 포크 떠 가시는 것이 어떨까요...
+
+개인 취향 100%로 만들 수 있던 것은 아주 만족스럽습니다만
+
+본인이 만들었으나 본인의 마음에 들지 않을 때 고통스러워집니다. 진짜입니다.
+
+결혼까지 5개월 이상으로 남았다면, 그리고 본인이 결혼의 주 결정권자가 아니라면,
+
+그 때 다섯번 정도 고민하고 시작하시기를 추천드립니다.
+
+이것은 결혼선배(예정: 현시점 저도 아직 결혼 안 함) 의 피를 토하는 간증입니다.
+
+## 기능
+
+CRUD 는 앞으로도 만들 계획이 없습니다. 정적 사이트 만세!
+
+이스터 에그가 조금 숨어있을 예정이지만 아직 개발되지 않았습니다.
+
+갤러리는 별도 페이지로 관리할 예정이지만 아직 개발되지 않았습니다.
+
+## Special thanks 2
+
+도와주고 싶지만 미적 감각이 없어 미안하다고 해줬던 예비신랑에게 이 레포를 바칩..
+아뇨 역시 이 레포는 제 겁니다.
+
+태훈아 고마워 사랑해
 
 ## Project Setup
 
