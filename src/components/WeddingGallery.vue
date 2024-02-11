@@ -1,8 +1,11 @@
 <template>
   <div class="wedding-gallery">
-    <img class="image" src="./../assets/image/collage_notext.png"/>
-    <div class="gallery-text">Gallery >></div>
+    <div class="gallery-wrapper">
+      <div class="gallery-title">갤러리</div>
+      <img class="image" src="./../assets/image/gallery.jpg"/>
+      <!--      <div class="gallery-more">사진 더보기 >></div>-->
 
+    </div>
   </div>
 </template>
 <style lang="scss">
@@ -10,19 +13,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(white, antiquewhite);
+  margin: 40px 0 60px 0;
 
-  .image {
+  .gallery-wrapper {
     width: 100%;
-    max-width: 800px;
-    padding: 20px;
+
+    @include tablet {
+      width: calc(100% - 60px);
+    }
+
+    @include desktop {
+      width: 1200px;
+    }
+
+    .image {
+      width: 100%;
+      max-width: 1200px;
+      display: block;
+    }
+
+    .gallery-more {
+      font-family: leferi-special;
+      color: $dark-color-1;
+      padding: 8px 20px;
+      text-align: right;
+    }
   }
 
-  .gallery-text {
-    font-family: leferi-special;
-    font-size: 20px;
-    color: $dark-color-1;
-  }
 }
 
 </style>
+<script setup>
+</script>

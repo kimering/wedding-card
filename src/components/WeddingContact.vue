@@ -119,19 +119,15 @@
     color: $dark-color-1;
     padding-bottom: 20px;
 
-    font-size: 1.4rem;
-
     @include mobile {
       margin: 0;
     }
     @include tablet {
       width: calc(100% - 60px);
-      font-size: 2rem;
     }
 
     @include desktop {
       width: 1200px;
-      font-size: 2.4rem;
     }
 
     .image {

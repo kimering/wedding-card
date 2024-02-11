@@ -34,7 +34,7 @@ const toggleToast = () => {
         </div>
         <div class="body-content">
           <div class="title">오시는 길</div>
-          <img class="image" src="./../assets/image/map.png"/>
+          <img class="image" src="./../assets/image/map.jpg"/>
           <div>
             <div class="map-title">도로명주소</div>
             <div class="map-address-wrapper">
@@ -67,16 +67,6 @@ const toggleToast = () => {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-image: linear-gradient(antiquewhite, white);
-
-  font-size: 1.4rem;
-  @include tablet {
-    font-size: 1.6rem;
-  }
-  @include desktop {
-    font-size: 2rem;
-  }
-
 
   .calendar-title {
     background-color: $dark-color-1;
@@ -93,7 +83,6 @@ const toggleToast = () => {
     @include desktop {
       width: 1200px;
       margin: 0;
-      left: calc((100% - 1200px) / 2);
     }
 
     .title-wrapper {
@@ -172,7 +161,6 @@ const toggleToast = () => {
     @include desktop {
       width: 1200px;
       margin: 0;
-      left: calc((100% - 1200px) / 2);
     }
 
     .body-wrapper {
@@ -276,7 +264,7 @@ const toggleToast = () => {
     transition: all 0.5s;
 
     &.active {
-      bottom: 50px;
+      bottom: 30px;
     }
 
     &.inactive {

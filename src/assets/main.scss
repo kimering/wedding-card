@@ -42,6 +42,15 @@ html {
 body {
   margin: 0;
   background-color: #fff;
+
+
+  @include tablet {
+    font-size: 20px;
+  }
+
+  @include desktop {
+    font-size: 24px;
+  }
 }
 
 #app {
@@ -64,4 +73,5 @@ a,
     background-color: hsla(160, 100%, 37%, 0.2);
   }
 }
+
 

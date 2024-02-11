@@ -7,7 +7,7 @@
       <div class="half-inner"></div>
     </div>
     <div class="circle-back"></div>
-    <img class="circle" src="./../assets/image/circle.png"/>
+    <img class="circle" src="./../assets/image/circle.jpg"/>
   </div>
 </template>
 
