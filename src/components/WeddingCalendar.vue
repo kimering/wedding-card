@@ -40,7 +40,7 @@
             <div class="map-icon naver-map"></div>
             <div class="map-icon kakao-map"></div>
             <div class="map-icon t-map"></div>
-            <div class="map-icon copy"></div>
+            <div class="map-icon copy" @click="navigator.clipboard.writeText('서울시 영등포구 은행로 30')"></div>
           </div>
         </div>
       </div>
@@ -54,6 +54,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  background-image: linear-gradient(antiquewhite, white);
 
   font-size: 1.4rem;
   @include tablet {

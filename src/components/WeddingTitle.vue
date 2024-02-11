@@ -39,7 +39,7 @@
   align-items: center;
   text-align: center;
   background: white;
-  margin: 40px 20px;
+  margin: 40px 20px 20px 20px;
   color: $dark-color-1;
   @include tablet {
     margin: 40px 30px;
