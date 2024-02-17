@@ -1,10 +1,8 @@
 <template>
   <div class="wedding-gallery">
     <div class="gallery-wrapper">
-      <div class="gallery-title">갤러리</div>
-      <img class="image" src="./../assets/image/gallery.jpg"/>
+      <img class="image" src="./../assets/image/gallery1.jpg"/>
       <!--      <div class="gallery-more">사진 더보기 >></div>-->
-
     </div>
   </div>
 </template>

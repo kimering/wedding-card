@@ -44,7 +44,7 @@ const toggleToast = () => {
             <div class="map-title">지번주소</div>
             <div class="map-address-wrapper">
               <div>서울시 영등포구 여의도동 16-2</div>
-              <div>중소기업중앙회 {{ showToast }}</div>
+              <div>중소기업중앙회</div>
             </div>
 
           </div>
