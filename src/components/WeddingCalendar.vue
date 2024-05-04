@@ -252,12 +252,13 @@ const toggleToast = () => {
     position: fixed;
     display: block;
     font-family: leferi;
+    font-size: 80%;
     color: white;
     z-index: 10;
     background: rgba(0, 0, 0, 0.8);
-    padding: 10px 20px;
-    border-radius: 20px;
-    bottom: -100px;
+    padding: .6rem 1.2rem;
+    border-radius: 1rem;
+    bottom: -8rem;
     left: 50%;
     transform: translate(-50%, 0);
     box-shadow: 3px 4px 11px 0px #00000040;

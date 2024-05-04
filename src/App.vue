@@ -11,18 +11,25 @@ import {ref, watch} from 'vue'
 
 const modalFlag = ref(false);
 const modalContent = ref('');
+const toastFlag = ref(false);
 
 const showModal = (accountNo) => {
   modalFlag.value = true;
   modalContent.value = accountNo;
-
-  console.log(modalContent.value)
 }
 
 const hideModal = () => {
-  console.log(modalContent.value)
   modalFlag.value = false;
   modalContent.value = '';
+}
+const copyAccountNo = () => {
+  navigator.clipboard.writeText(
+    `${modalContent.value.bank} ${modalContent.value.no.replaceAll('-', '')}`
+  )
+  toastFlag.value = true;
+  setTimeout(() => {
+    toastFlag.value = false;
+  }, 3000)
 }
 
 watch(modalFlag, () => {
@@ -44,10 +51,15 @@ watch(modalFlag, () => {
   <div v-show="modalFlag" class="modal-wrap" @click="hideModal">
     <div class="modal-container" @click.stop>
       <div class="modal-title">마음 전하실 곳</div>
-      <div class="modal-content">{{ modalContent }}</div>
+      <div class="modal-content">
+        {{ modalContent.name }}<br/>
+        {{ modalContent.bank }} {{ modalContent.no }}
+        <button class="copy-btn" @click="copyAccountNo">copy</button>
+      </div>
       <div class="modal-footer" @click="hideModal">닫기</div>
     </div>
   </div>
+  <div id="toast_copy" :class="{active:toastFlag}">복사되었습니다!</div>
 
 </template>
 
@@ -85,6 +97,14 @@ watch(modalFlag, () => {
       font-size: 100%;
       text-align: center;
       padding: 0 1rem;
+
+      .copy-btn {
+        background: $light-color-1;
+        color: #fff;
+        border-radius: 1rem;
+        padding: .2rem .6rem;
+        border: none;
+      }
     }
 
     .modal-footer {
@@ -95,6 +115,32 @@ watch(modalFlag, () => {
       margin-top: 1rem;
       font-size: 80%;
     }
+  }
+}
+
+#toast_copy {
+  position: fixed;
+  display: block;
+  font-family: leferi;
+  font-size: 80%;
+  color: white;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.8);
+  padding: .6rem 1.2rem;
+  border-radius: 1rem;
+  bottom: -8rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: 3px 4px 11px 0px #00000040;
+  transition: all 0.5s;
+
+  &.active {
+    bottom: 30px;
+  }
+
+  &.inactive {
+    bottom: -100px;
+
   }
 }
 </style>

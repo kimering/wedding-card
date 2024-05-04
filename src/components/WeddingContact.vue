@@ -2,27 +2,19 @@
 
 import {ref} from 'vue'
 
-// const modalFlag = ref(false);
-// const modalContent = ref('');
 const contactTaerim = ref([
-  {name: '신랑 김태훈', tel: '01085154753', accountNo: '김태훈 우리은행 1002-663-189283'},
-  {name: '신부 김혜림', tel: '01071207671', accountNo: '김혜림 신한은행 110-405-032237'},
+  {name: '신랑 김태훈', tel: '01085154753', accountInfo: {bank: '우리은행', no: '1002-663-189283', name: '김태훈'}},
+  {name: '신부 김혜림', tel: '01071207671', accountInfo: {bank: '신한은행', no: '110-405-032237', name: '김혜림'}},
 ])
 const contactTaeParents = ref([
-  {name: '아버지 김승섭', tel: '01055374753', accountNo: '김승섭 하나은행 692-910285-60307'},
-  {name: '어머니 채영희', tel: '01056444753', accountNo: '채영희 우리은행 1002-735-577556'},
+  {name: '아버지 김승섭', tel: '01055374753', accountInfo: {name: '김승섭', bank: '하나은행', no: '692-910285-60307'}},
+  {name: '어머니 채영희', tel: '01056444753', accountInfo: {name: '채영희', bank: '우리은행', no: '1002-735-577556'}},
 ])
 const contactRimParents = ref([
-  {name: '아버지 김성우', tel: '01096717671', accountNo: '김성우 하나은행 371-890194-98107'},
-  {name: '어머니 김주현', tel: '01068018901', accountNo: '김주현 신한은행 110-156-026693'},
+  {name: '아버지 김성우', tel: '01096717671', accountInfo: {name: '김성우', bank: '하나은행', no: '371-890194-98107'}},
+  {name: '어머니 김주현', tel: '01068018901', accountInfo: {name: '김주현', bank: '신한은행', no: '110-156-026693'}},
 ])
 
-// const showModal = (accountNo) => {
-//   modalFlag.value = true;
-//   modalContent.value = accountNo;
-//
-//   console.log(modalFlag.value, modalContent.value)
-// }
 </script>
 
 <template>
@@ -46,7 +38,7 @@ const contactRimParents = ref([
                 <div
                   :class="[index % 2 ? 'hyerim-heart' : 'taehun-heart']"
                   class="icon"
-                  @click="$emit('showContactModal', contact.accountNo)"
+                  @click="$emit('showContactModal', contact.accountInfo)"
                 ></div>
               </div>
             </div>
@@ -67,7 +59,7 @@ const contactRimParents = ref([
                 <div
                   :class="[index % 2 ? 'hyerim-heart' : 'taehun-heart']"
                   class="icon"
-                  @click="$emit('showContactModal', contact.accountNo)"
+                  @click="$emit('showContactModal', contact.accountInfo)"
                 ></div>
               </div>
             </div>
@@ -88,7 +80,7 @@ const contactRimParents = ref([
                 <div
                   :class="[index % 2 ? 'hyerim-heart' : 'taehun-heart']"
                   class="icon"
-                  @click="$emit('showContactModal', contact.accountNo)"
+                  @click="$emit('showContactModal', contact.accountInfo)"
                 ></div>
               </div>
             </div>
