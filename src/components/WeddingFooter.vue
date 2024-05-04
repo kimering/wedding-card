@@ -52,7 +52,7 @@
   .footer-contents {
     display: flex;
     flex-direction: row;
-    font-size: 50%;
+    font-size: 60%;
     gap: 20px;
     width: 100%;
     max-width: 1100px;

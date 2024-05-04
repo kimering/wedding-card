@@ -2,16 +2,27 @@
 
 import {ref} from 'vue'
 
-const showToast = ref(false);
+// const modalFlag = ref(false);
+// const modalContent = ref('');
+const contactTaerim = ref([
+  {name: '신랑 김태훈', tel: '01085154753', accountNo: '김태훈 우리은행 1002-663-189283'},
+  {name: '신부 김혜림', tel: '01071207671', accountNo: '김혜림 신한은행 110-405-032237'},
+])
+const contactTaeParents = ref([
+  {name: '아버지 김승섭', tel: '01055374753', accountNo: '김승섭 하나은행 692-910285-60307'},
+  {name: '어머니 채영희', tel: '01056444753', accountNo: '채영희 우리은행 1002-735-577556'},
+])
+const contactRimParents = ref([
+  {name: '아버지 김성우', tel: '01096717671', accountNo: '김성우 하나은행 371-890194-98107'},
+  {name: '어머니 김주현', tel: '01068018901', accountNo: '김주현 신한은행 110-156-026693'},
+])
 
-const toggleToast = (text) => {
-  navigator.clipboard.writeText(text)
-
-  showToast.value = true;
-  setTimeout(() => {
-    showToast.value = false;
-  }, 3000)
-}
+// const showModal = (accountNo) => {
+//   modalFlag.value = true;
+//   modalContent.value = accountNo;
+//
+//   console.log(modalFlag.value, modalContent.value)
+// }
 </script>
 
 <template>
@@ -23,20 +34,20 @@ const toggleToast = (text) => {
         <div class="contact-contents">
           <div class="contact-title">신랑, 신부에게 마음 전하기</div>
           <div class="contact">
-            <div>
-              <div class="name">신랑 김태훈</div>
+            <div v-for="(contact, index) in contactTaerim">
+              <div class="name">{{ contact.name }}</div>
               <div class="icons">
-                <div class="icon taehun-call" onclick="location.href='tel:01085154753'"></div>
-                <div class="icon taehun-heart" @click="toggleToast('')"></div>
-                <!--                <div class="icon taehun-msg" onclick="location.href='sms:01085154753'"></div>-->
-              </div>
-            </div>
-            <div>
-              <div class="name">신부 김혜림</div>
-              <div class="icons">
-                <div class="icon hyerim-call" onclick="document.location.href='tel:01071207671'"></div>
-                <div class="icon hyerim-heart" @click="toggleToast('')"></div>
-                <!--                <div class="icon hyerim-msg" onclick="document.location.href='sms:01071207671'"></div>-->
+                <a
+                  :class="[index % 2 ? 'hyerim-call' : 'taehun-call']"
+                  :href="`tel:${contact.tel}`"
+                  class="icon"
+                  @click="document.location.href=`tel:${contact.tel}`"
+                ></a>
+                <div
+                  :class="[index % 2 ? 'hyerim-heart' : 'taehun-heart']"
+                  class="icon"
+                  @click="$emit('showContactModal', contact.accountNo)"
+                ></div>
               </div>
             </div>
           </div>
@@ -44,20 +55,20 @@ const toggleToast = (text) => {
         <div class="contact-contents">
           <div class="contact-title">신랑 측 혼주에게 마음 전하기</div>
           <div class="contact">
-            <div>
-              <div class="name">아버지 김승섭</div>
+            <div v-for="(contact, index) in contactTaeParents">
+              <div class="name">{{ contact.name }}</div>
               <div class="icons">
-                <div class="icon taehun-call" onclick="location.href='tel:01055374753'"></div>
-                <div class="icon taehun-heart" @click="toggleToast('')"></div>
-                <!--                <div class="icon taehun-msg" onclick="location.href='sms:01055374753'"></div>-->
-              </div>
-            </div>
-            <div>
-              <div class="name">어머니 채영희</div>
-              <div class="icons">
-                <div class="icon hyerim-call" onclick="location.href='tel:01056444753'"></div>
-                <div class="icon hyerim-heart" @click="toggleToast('')"></div>
-                <!--                <div class="icon hyerim-msg" onclick="location.href='sms:01056444753'"></div>-->
+                <a
+                  :class="[index % 2 ? 'hyerim-call' : 'taehun-call']"
+                  :href="`tel:${contact.tel}`"
+                  class="icon"
+                  @click="document.location.href=`tel:${contact.tel}`"
+                ></a>
+                <div
+                  :class="[index % 2 ? 'hyerim-heart' : 'taehun-heart']"
+                  class="icon"
+                  @click="$emit('showContactModal', contact.accountNo)"
+                ></div>
               </div>
             </div>
           </div>
@@ -65,20 +76,20 @@ const toggleToast = (text) => {
         <div class="contact-contents">
           <div class="contact-title">신부 측 혼주에게 마음 전하기</div>
           <div class="contact">
-            <div>
-              <div class="name">아버지 김성우</div>
+            <div v-for="(contact, index) in contactRimParents">
+              <div class="name">{{ contact.name }}</div>
               <div class="icons">
-                <div class="icon taehun-call" onclick="location.href='tel:01096717671'"></div>
-                <div class="icon taehun-heart" @click="toggleToast('')"></div>
-                <!--                <div class="icon taehun-msg" onclick="location.href='sms:01096717671'"></div>-->
-              </div>
-            </div>
-            <div>
-              <div class="name">어머니 김주현</div>
-              <div class="icons">
-                <div class="icon hyerim-call" onclick="location.href='tel:01068016901'"></div>
-                <div class="icon hyerim-heart" @click="toggleToast('')"></div>
-                <!--                <div class="icon hyerim-msg" onclick="location.href='sms:01068016901'"></div>-->
+                <a
+                  :class="[index % 2 ? 'hyerim-call' : 'taehun-call']"
+                  :href="`tel:${contact.tel}`"
+                  class="icon"
+                  @click="document.location.href=`tel:${contact.tel}`"
+                ></a>
+                <div
+                  :class="[index % 2 ? 'hyerim-heart' : 'taehun-heart']"
+                  class="icon"
+                  @click="$emit('showContactModal', contact.accountNo)"
+                ></div>
               </div>
             </div>
           </div>
@@ -115,6 +126,7 @@ const toggleToast = (text) => {
         </div>
       </div>
     </div>
+    <div v-show="modalFlag"></div>
   </div>
 </template>
 
@@ -200,15 +212,20 @@ const toggleToast = (text) => {
             .icons {
               display: flex;
               flex-direction: row;
-              justify-content: space-between;
+              justify-content: center;
               padding-top: 8px;
               max-width: 200px;
+
 
               .icon {
                 width: 30%;
                 max-width: 80px;
                 aspect-ratio: 1 / 1;
                 border-radius: 50%;
+
+                &:not(:last-child) {
+                  margin-right: 20px;
+                }
 
                 &.taehun-call {
                   background: center / 60% no-repeat url("../assets/icon/call.png"), #8d92a6;
