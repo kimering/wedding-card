@@ -11,7 +11,7 @@ const contactTaeParents = ref([
   {name: '어머니 채영희', tel: '01056444753', accountInfo: {name: '채영희', bank: '우리은행', no: '1002-735-577556'}},
 ])
 const contactRimParents = ref([
-  {name: '아버지 김성우', tel: '01096717671', accountInfo: {name: '김성우', bank: '하나은행', no: '371-890194-98107'}},
+  {name: '아버지 김성우', tel: '01096717671', accountInfo: {name: '김성우', bank: '신한은행', no: '110-169-033340'}},
   {name: '어머니 김주현', tel: '01068018901', accountInfo: {name: '김주현', bank: '신한은행', no: '110-156-026693'}},
 ])
 
