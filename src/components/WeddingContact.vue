@@ -12,7 +12,7 @@ const contactTaeParents = ref([
 ])
 const contactRimParents = ref([
   {name: '아버지 김성우', tel: '01096717671', accountInfo: {name: '김성우', bank: '신한은행', no: '110-169-033340'}},
-  {name: '어머니 김주현', tel: '01068018901', accountInfo: {name: '김주현', bank: '신한은행', no: '110-156-026693'}},
+  {name: '어머니 김주현', tel: '01068016901', accountInfo: {name: '김주현', bank: '신한은행', no: '110-156-026693'}},
 ])
 
 </script>
